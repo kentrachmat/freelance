@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial scale=1" />
+    <meta charset="utf-8">
+    <title> Science </title>
+
+    <link rel="stylesheet" href="css/menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/science.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/484456e5ca.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="js/science.js"></script>
+</head>
+
+<body>
+    <div>
+        <img src="images/board.png" alt="Board" style="height: 600px; width:100%;">
+        <div class="text" id="board"></div>
+    </div>
+    <div class="menu nav-links">
+        <a href="index.html" class="menu__link">
+            Home
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a><br>
+        <a href="math.html" class="menu__link">
+            Math
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a><br>
+        <a href="science.html" class="menu__link menu__link--active">
+            Science
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a><br>
+        <a href="english.html" class="menu__link">
+            English
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a>
+    </div>
+    <br><br>
+    <div class="container-fuid">
+        <div class="row clouds">
+            <div class="col-sm-4">
+                <img src="images/home/cloud2.png" alt="cloud2" class="picture">
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <img src="images/home/cloud2.png" alt="cloud2" class="picture">
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="title_text">Put the logos on the right boxes !</div>
+            <section class="score">
+                Score :
+                <span class="total">0</span>
+
+            </section>
+            <section class="draggable-items">
+            </section>
+            <section class="matching-pairs">
+            </section>
+        </div>
+    </div>
+    <div class="container-fuid">
+        <div class="row" style="padding-bottom: 70px;">
+            <div class="col-sm-12" style="padding-top: 100px;">
+                <h2 id="title_text" class="textmath1">Generate the sound and click the animals corresponding !</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="images/cat.png" onclick="checkSound(this.id)" id="catPic" class="animalPic" alt="Cat">
+            </div>
+            <div class="col-sm-4">
+                <img src="images/cow.png" onclick="checkSound(this.id)" id="cowPic" class="animalPic" alt="Cow">
+            </div>
+            <div class="col-sm-4">
+                <img src="images/dog.png" onclick="checkSound(this.id)" id="dogPic" class="animalPic" alt="Dog">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="images/chicken.png" id="chickenPic" class="animalPic" onclick="checkSound(this.id)" alt="Chicken">
+            </div>
+            <div class="col-sm-4">
+                <button id="check1" onclick="check1()">Generate Sound</button>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/frog.png" onclick="checkSound(this.id)" id="frogPic" class="animalPic" alt="Frog">
+            </div>
+
+        </div>
+
+        <audio id="catsound" class="sound" src="music/cat.mp3"></audio>
+        <audio id="dogsound" class="sound" src="music/dog.mp3"></audio>
+        <audio id="cowsound" class="sound" src="music/cow.mp3"></audio>
+        <audio id="chickensound" class="sound" src="music/chicken.mp3"></audio>
+        <audio id="frogsound" class="sound" src="music/frog.mp3"></audio>
+    </div>
+
+</body>
+<script src="js/scienceGame.js"></script>
+
+</html>

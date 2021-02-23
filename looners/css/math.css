@@ -1,0 +1,370 @@
+/* BODY */
+body {
+    background: linear-gradient(to right, #0ECBF5, #8ecdff);
+    background-color: #eee;
+    color: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MENU */
+.menu {
+    position: absolute;
+    top: 35%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 80px;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-family: 'chalk',
+        Arial,
+        sans-serif;
+}
+
+/* CLOUDS */
+.clouds div {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 4000px;
+    width: 4000px;
+    animation: move 30s linear infinite;
+    z-index: -123;
+}
+
+.clouds div img {
+    max-width: 1000%;
+    height: 300px;
+
+}
+
+.clouds div:nth-child(1) {
+    animation-duration: 15s;
+    top: 100px;
+}
+
+.clouds div:nth-child(2) {
+    animation-duration: 20s;
+    top: 200px;
+}
+
+.clouds div:nth-child(3) {
+    animation-duration: 5s;
+    top: 500px;
+}
+
+/* SORTING */
+.box {
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #333;
+    border-radius: 0.5rem;
+    margin: 1.25rem;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    user-select: none;
+    cursor: move;
+    transition: 0.5s;
+}
+
+.box span {
+    pointer-events: none;
+    font-family: '3dumbregular',
+        Arial,
+        sans-serif;
+    font-size: 70px;
+}
+
+.drag-start {
+    opacity: 0.4;
+}
+
+.drag-enter {
+    border-style: dashed;
+}
+
+.box:nth-child(odd).drag-enter {
+    transform: rotate(15deg);
+}
+
+.box:nth-child(even).drag-enter {
+    transform: rotate(-15deg);
+}
+
+.box:nth-child(odd).drag-start {
+    transform: rotate(15deg) scale(0.75);
+}
+
+.box:nth-child(even).drag-start {
+    transform: rotate(-15deg) scale(0.75);
+}
+
+#check1 {
+    background-color: #44c767;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 42px;
+    padding: 16px 31px;
+    text-decoration: none;
+    margin-top: 20px;
+    text-shadow: 0px 1px 0px #2f6627;
+    position: absolute;
+    font-family: 'chalk',
+        Arial,
+        sans-serif;
+    left: 45%;
+}
+
+#check1:hover {
+    background-color: #5cbf2a;
+}
+
+#check1:hover {
+    animation: shake 0.5s;
+    background-color: #5cbf2a;
+    animation-iteration-count: infinite;
+}
+
+/* ADDITION */
+.textmath1 {
+    text-align: center;
+    font-family: "chalk";
+    font-size: 50px;
+}
+
+.container {
+    margin: 20%;
+    padding: 20px;
+    overflow: hidden;
+
+}
+
+.container h1 {
+    float: left;
+    margin-left: 10%;
+    color: white;
+}
+
+.container ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin-left: 60%;
+}
+
+.container li {
+    margin-top: 10px;
+    float: left;
+    padding: 0 20px 0 20px;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+}
+
+.current a::after {
+    content: '-';
+    font-size: 4px;
+    background-color: white;
+    display: block;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 82% 18%;
+
+}
+
+.equation {
+    font-size: 67px;
+    background-color: rgba(39, 72, 233, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.equation h1 {
+    font-size: 67px;
+    display: inline;
+    padding: 20px;
+    font-family: '3dumbregular',
+        Arial,
+        sans-serif;
+}
+
+.answer-options {
+    margin-right: 10px;
+
+}
+
+.answer-options h1 {
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+}
+
+#option1 {
+    font-size: 50px;
+    background-color: #FE4A49;
+    color: white;
+    transition: 1s;
+    font-family: '3dumbregular',
+        Arial,
+        sans-serif;
+}
+
+#option1:hover {
+    color: #FE4A49;
+    background: white;
+}
+
+#option2 {
+    font-size: 50px;
+    background-color: #2AB7CA;
+    color: white;
+    transition: 1s;
+    font-family: '3dumbregular',
+        Arial,
+        sans-serif;
+}
+
+#option2:hover {
+    color: #2AB7CA;
+    background: white;
+}
+
+#option3 {
+    font-size: 50px;
+    background-color: #FED766;
+    color: white;
+    transition: 1s;
+    font-family: '3dumbregular',
+        Arial,
+        sans-serif;
+}
+
+#option3:hover {
+    color: #FED766;
+    background: white;
+}
+
+.score {
+    font-family: 'chalk',
+        Arial,
+        sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    margin: 1rem;
+    position: relative;
+    transition: opacity 0.2s;
+}
+
+/* POP UP */
+.swal-wide {
+    width: 750px !important;
+    height: 500px !important;
+    font-size: 1.6rem !important;
+    background-color: azure !important;
+    border: 3px solid white ;
+}
+
+/* KEYFRAMES */
+@keyframes move {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* MEDIA */
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .box {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        margin: 0.5rem;
+    }
+}

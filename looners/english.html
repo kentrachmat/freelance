@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial scale=1" />
+    <meta charset="utf-8">
+    <title> English </title>
+
+    <link rel="stylesheet" href="css/menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/english.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/english.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <img src="images/board.png" alt="Board" style="height: 600px; width:100%;">
+        <div class="text" id="board"></div>
+    </div>
+    <div class="menu nav-links">
+        <a href="index.html" class="menu__link">
+            Home
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a><br>
+        <a href="math.html" class="menu__link">
+            Math
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a><br>
+        <a href="science.html" class="menu__link">
+            Science
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a><br>
+        <a href="english.html" class="menu__link menu__link--active">
+            English
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4" />
+            </svg>
+        </a>
+    </div>
+    <br><br>
+
+    <div class="container-fluid">
+        <div class="row clouds">
+            <div class="col-sm-4">
+                <img src="images/home/cloud2.png" alt="cloud2" class="picture">
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="images/home/cloud2.png" alt="cloud2" class="picture">
+            </div>
+        </div>
+        <div class="row">
+            <button class="big-button" id="hintbutton" style="text-align: center;">WORD HINT</button>
+        </div>
+        <div class="row">
+            <div id="title_text">Arrange these word to the right order !</div>
+            <section class="score">
+                Score :
+                <span class="total">0</span>
+
+            </section>
+
+            <section class="matching-pairs">
+            </section>
+            <section class="draggable-items">
+            </section>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" style="padding-top: 100px;">
+                <h2 id="title_text" class="textmath1">Drag the letters in correct sequence and click "CHECK"</h2>
+            </div>
+        </div>
+        <div class="row" style="left: 30%;">
+            <div class="box col-sm-1" draggable="true" style="background-color: #ff6384;" id="box-3"><span>C</span></div>
+            <div class="box col-sm-1" draggable="true" style="background-color: #36a2eb;" id="box-1"><span>A</span></div>
+            <div class="box col-sm-1" draggable="true" style="background-color: #ffce56;" id="box-4"><span>D</span></div>
+            <div class="box col-sm-1" draggable="true" style="background-color: #FF6633;" id="box-6"><span>F</span></div>
+            <div class="box col-sm-1" draggable="true" style="background-color: #9966ff;" id="box-2"><span>B</span></div>
+            <div class="box col-sm-1" draggable="true" style="background-color: #4bc0c0;" id="box-5"><span>E</span></div>
+        </div>
+        <div class="row" style="padding-bottom: 150px ;">
+            <button id="check1" onclick="check1()">CHECK</button>
+        </div>
+    </div>
+    <audio id="myAudio1">
+        <source src="music/wrong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="myAudio2">
+        <source src="music/correct.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+<script src="js/englishGame.js"></script>
+
+</html>
